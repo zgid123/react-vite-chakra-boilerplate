@@ -1,0 +1,51 @@
+{
+  "name": "@react/chakra",
+  "version": "0.0.1",
+  "license": "MIT",
+  "type": "module",
+  "main": "./src/chakra.ts",
+  "types": "./src/chakra.ts",
+  "exports": {
+    ".": "./src/chakra.ts",
+    "./core": "./src/core/index.ts"
+  },
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./src/chakra.ts"
+      ],
+      "core": [
+        "./src/core/index.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "theme": "chakra-cli tokens ./src/core/ThemeProvider/v1/theme.ts",
+    "postinstall": "pnpm theme",
+    "test": "vitest run",
+    "test:cov": "vitest run --coverage",
+    "vitest-preview": "vitest-preview"
+  },
+  "dependencies": {
+    "@chakra-ui/anatomy": "^2.2.2",
+    "@chakra-ui/icons": "^2.1.1",
+    "@chakra-ui/react": "^2.8.2",
+    "@chakra-ui/react-context": "^2.1.0",
+    "@chakra-ui/styled-system": "^2.9.2",
+    "@core/utils": "workspace:^",
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@react/utils": "workspace:^",
+    "@tanstack/react-router": "^1.48.4",
+    "framer-motion": "^11.3.28",
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@chakra-ui/cli": "^2.4.1",
+    "@chakra-ui/utils": "^2.0.14",
+    "@swc/helpers": "^0.5.12",
+    "@types/react": "^18.3.3",
+    "@types/uniqid": "^5.3.4",
+    "uniqid": "^5.4.0"
+  }
+}

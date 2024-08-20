@@ -132,6 +132,7 @@ export default tseslint.config(
       ...reactPlugin.configs['jsx-runtime'].rules,
       ...storybookPlugin.configs.recommended.rules,
       ...reactHooksPlugin.configs.recommended.rules,
+      'react/jsx-key': 'off',
       'react/prop-types': 'off',
       'react/no-unescaped-entities': 'off',
     },

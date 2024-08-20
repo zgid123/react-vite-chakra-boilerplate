@@ -1,0 +1,36 @@
+{
+  "name": "@core/utils",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./src/utils.ts",
+  "types": "./src/utils.ts",
+  "exports": {
+    ".": "./src/utils.ts",
+    "./remeda": "./src/remeda.ts",
+    "./objectUtils": "./src/objectUtils.ts",
+    "./stringUtils": "./src/stringUtils.ts"
+  },
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./src/utils.ts"
+      ],
+      "remeda": [
+        "./src/remeda.ts"
+      ],
+      "objectUtils": [
+        "./src/objectUtils.ts"
+      ],
+      "stringUtils": [
+        "./src/stringUtils.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:cov": "vitest run --coverage"
+  },
+  "dependencies": {
+    "remeda": "^2.11.0"
+  }
+}

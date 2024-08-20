@@ -89,3 +89,4 @@ msbuild.wrn
 .next/**
 
 *storybook.log
+.vitest-preview

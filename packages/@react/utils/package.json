@@ -1,0 +1,38 @@
+{
+  "name": "@react/utils",
+  "version": "0.0.1",
+  "exports": {
+    "./hooks": "./src/hooks/index.ts",
+    "./useForm": "./src/useForm/index.ts",
+    "./zustand": "./src/zustandStore/index.ts",
+    "./queryHooks": "./src/queryHooks/index.ts"
+  },
+  "typesVersions": {
+    "*": {
+      "hooks": [
+        "./src/hooks/index.ts"
+      ],
+      "useForm": [
+        "./src/useForm/index.ts"
+      ],
+      "zustand": [
+        "./src/zustandStore/index.ts"
+      ],
+      "queryHooks": [
+        "./src/queryHooks/index.ts"
+      ]
+    }
+  },
+  "dependencies": {
+    "@core/utils": "workspace:^",
+    "@tanstack/react-query": "^5.52.0",
+    "auto-zustand-selectors-hook": "^2.0.5",
+    "immer": "^10.1.1",
+    "react": "^18.3.1",
+    "react-hook-form": "^7.52.2",
+    "zustand": "^4.5.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3"
+  }
+}

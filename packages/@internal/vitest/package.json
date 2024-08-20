@@ -1,0 +1,30 @@
+{
+  "name": "@internal/vitest",
+  "version": "0.0.1",
+  "exports": {
+    "./utils": "./lib/utils/index.mjs",
+    "./testing-library": "./lib/testingLibrary/index.mjs"
+  },
+  "typesVersions": {
+    "*": {
+      "utils": [
+        "./lib/utils/index.d.mts"
+      ],
+      "testing-library": [
+        "./lib/testingLibrary/index.d.mts"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "dependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.5.2",
+    "jsdom": "^24.1.1"
+  },
+  "devDependencies": {
+    "tsup": "^8.2.4"
+  }
+}
