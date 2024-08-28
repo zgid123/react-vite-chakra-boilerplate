@@ -1,0 +1,19 @@
+name: Prepare Node.JS and PNPM
+
+description: Prepare Node.JS and PNPM
+
+runs:
+  using: composite
+  steps:
+    - name: Install pnpm
+      uses: pnpm/action-setup@v4
+      id: pnpm-install
+      with:
+        version: 9.4.0
+        run_install: false
+
+    - name: Install Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20.3.1
+        cache: "pnpm"

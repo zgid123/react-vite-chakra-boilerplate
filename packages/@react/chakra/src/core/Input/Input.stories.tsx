@@ -1,9 +1,9 @@
 import { Stack } from '@chakra-ui/react';
-import { EmailIcon } from '@chakra-ui/icons';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Input } from './Input';
+import { RefreshIcon } from '../Icon';
 import { chakraDecorator } from '../../storybook';
 
 const meta = {
@@ -31,7 +31,7 @@ export const Default: TStory = {
 
 export const WithLeftElement: TStory = {
   args: {
-    leftElement: <EmailIcon />,
+    leftElement: <RefreshIcon />,
     placeholder: 'Username or email',
   },
   render: (args) => {
@@ -45,7 +45,7 @@ export const WithLeftElement: TStory = {
 
 export const WithRightElement: TStory = {
   args: {
-    rightElement: <EmailIcon />,
+    rightElement: <RefreshIcon />,
     placeholder: 'Username or email',
   },
   render: (args) => {

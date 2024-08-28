@@ -24,5 +24,8 @@ export const Input = defineInputStyleConfig({
         p: 0.5,
       },
     },
+    field: {
+      h: $customInputHeightVar.reference,
+    },
   }),
 });
