@@ -126,7 +126,7 @@ export default tseslint.config(
       import: legacyPlugin('eslint-plugin-import', 'import'),
       'jsx-a11y': legacyPlugin('eslint-plugin-jsx-a11y', 'jsx-a11y'),
     },
-    ignores: ['dist', '.eslintrc.json'],
+    ignores: ['dist', '.eslintrc.json', '**/*.d.ts'],
     rules: {
       ...reactPlugin.configs.recommended.rules,
       ...reactPlugin.configs['jsx-runtime'].rules,
@@ -140,6 +140,7 @@ export default tseslint.config(
   {
     name: 'react-app',
     files: ['workspaces/**/*.ts', 'workspaces/**/*.tsx'],
+    ignores: ['**/*.d.ts'],
     plugins: {
       'react-refresh': reactRefreshPlugin,
     },

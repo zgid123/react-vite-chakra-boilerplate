@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { getByTag } from '@internal/vitest/testing-library';
+import { getByTag } from '@config/vitest/testing-library';
 
 import { Form } from '../../../core/Form';
 import { renderWithTheme } from '../../utils';

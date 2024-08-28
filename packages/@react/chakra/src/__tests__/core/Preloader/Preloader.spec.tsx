@@ -1,5 +1,5 @@
 import { describe, expect, it, suite } from 'vitest';
-import { getByClassName } from '@internal/vitest/testing-library';
+import { getByClassName } from '@config/vitest/testing-library';
 
 import { Preloader } from '../../../core';
 import { renderWithTheme } from '../../utils';

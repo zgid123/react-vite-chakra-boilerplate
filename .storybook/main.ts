@@ -8,6 +8,12 @@ function getAbsolutePath(value: string): string {
 
 const config: StorybookConfig = {
   stories: ['../**/*.mdx', '../**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  staticDirs: [
+    {
+      to: '/fonts',
+      from: '../workspaces/main-project/public/fonts',
+    },
+  ],
   addons: [
     getAbsolutePath('storybook-dark-mode'),
     getAbsolutePath('@storybook/addon-links'),

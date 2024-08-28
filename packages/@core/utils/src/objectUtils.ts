@@ -34,6 +34,6 @@ export function deepCamelizeKeys(data: TAny): TAny {
   return deepLookup(data, camelize);
 }
 
-export function deepSnakizeKeys(data: TAny): TAny {
+export function deepSnakeizeKeys(data: TAny): TAny {
   return deepLookup(data, snakize);
 }

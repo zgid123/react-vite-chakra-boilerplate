@@ -7,7 +7,7 @@ import {
   fireEvent,
   getByName,
   getByClassName,
-} from '@internal/vitest/testing-library';
+} from '@config/vitest/testing-library';
 
 import type { JSX, ReactNode } from 'react';
 

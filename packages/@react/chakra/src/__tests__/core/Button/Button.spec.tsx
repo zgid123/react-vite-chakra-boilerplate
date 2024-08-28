@@ -1,6 +1,6 @@
 import { combine } from '@core/utils/stringUtils';
 import { describe, expect, it, suite } from 'vitest';
-import { getByClassName } from '@internal/vitest/testing-library';
+import { getByClassName } from '@config/vitest/testing-library';
 
 import { Button } from '../../../core/Button';
 import { renderWithTheme } from '../../utils';

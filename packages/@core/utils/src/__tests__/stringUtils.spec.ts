@@ -1,6 +1,6 @@
 import { describe, expect, it, suite } from 'vitest';
 
-import { camelize, combine, snakize } from '../stringUtils';
+import { buildUrl, camelize, combine, snakize } from '../stringUtils';
 
 describe('combine', () => {
   suite('with default options', () => {
@@ -45,5 +45,13 @@ describe('camelize', () => {
 describe('snakize', () => {
   it('snakizes string', () => {
     expect(snakize('testTest')).toBe('test_test');
+  });
+});
+
+describe('buildUrl', () => {
+  it('builds url', () => {
+    expect(buildUrl('https://google.com', '/test/')).toBe(
+      'https://google.com/test',
+    );
   });
 });

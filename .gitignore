@@ -88,5 +88,9 @@ msbuild.wrn
 .turbo
 .next/**
 
+# storybook
 *storybook.log
+storybook-static
+
+# vitest
 .vitest-preview

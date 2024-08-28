@@ -1,5 +1,5 @@
 {
-  "name": "@internal/vitest",
+  "name": "@config/vitest",
   "version": "0.0.1",
   "exports": {
     "./utils": "./lib/utils/index.mjs",
@@ -22,7 +22,7 @@
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.5.2",
-    "jsdom": "^24.1.1"
+    "jsdom": "^25.0.0"
   },
   "devDependencies": {
     "tsup": "^8.2.4"

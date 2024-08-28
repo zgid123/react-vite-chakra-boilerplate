@@ -1,3 +1,4 @@
+export { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 export {
   useQuery,
   QueryClient,

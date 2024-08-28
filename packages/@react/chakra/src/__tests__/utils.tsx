@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 
-import { render, renderHook } from '@internal/vitest/testing-library';
+import { render, renderHook } from '@config/vitest/testing-library';
 
 import type { JSX } from 'react';
 

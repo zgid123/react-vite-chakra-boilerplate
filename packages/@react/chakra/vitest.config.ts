@@ -1,4 +1,4 @@
-import { configVitest } from '@internal/vitest/utils';
+import { configVitest } from '@config/vitest/utils';
 
 import type { UserConfigExport } from 'vitest/config';
 

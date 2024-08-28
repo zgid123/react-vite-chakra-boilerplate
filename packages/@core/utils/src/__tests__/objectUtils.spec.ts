@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { deepCamelizeKeys, deepSnakizeKeys } from '../objectUtils';
+import { deepCamelizeKeys, deepSnakeizeKeys } from '../objectUtils';
 
 const snakizedData = {
   user_info: {
@@ -28,8 +28,8 @@ describe('deepCamelizeKeys', () => {
   });
 });
 
-describe('deepSnakizeKeys', () => {
+describe('deepSnakeizeKeys', () => {
   it('snakizes object keys', () => {
-    expect(deepSnakizeKeys(camelizedData)).toEqual(snakizedData);
+    expect(deepSnakeizeKeys(camelizedData)).toEqual(snakizedData);
   });
 });

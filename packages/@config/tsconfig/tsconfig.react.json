@@ -1,11 +1,17 @@
 {
   "extends": "./tsconfig.es.json",
   "compilerOptions": {
+    "allowImportingTsExtensions": true,
     "jsx": "react-jsx",
     "lib": [
       "DOM",
       "DOM.Iterable",
       "ESNext"
-    ]
+    ],
+    "moduleDetection": "force",
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "useDefineForClassFields": true
   }
 }

@@ -1,0 +1,32 @@
+{
+  "name": "@react/auth",
+  "version": "0.0.1",
+  "license": "MIT",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./mocks": "./src/mocks/index.ts"
+  },
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./src/index.ts"
+      ],
+      "core": [
+        "./src/mocks/index.ts"
+      ]
+    }
+  },
+  "dependencies": {
+    "@core/api": "workspace:^",
+    "@core/utils": "workspace:^",
+    "@react/utils": "workspace:^",
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@data/view-models": "workspace:^",
+    "@types/react": "^18.3.4"
+  }
+}

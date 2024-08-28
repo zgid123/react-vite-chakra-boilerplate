@@ -1,6 +1,6 @@
 import { EmailIcon } from '@chakra-ui/icons';
 import { describe, expect, it, suite } from 'vitest';
-import { getByClassName, getByTag } from '@internal/vitest/testing-library';
+import { getByClassName, getByTag } from '@config/vitest/testing-library';
 
 import { Input } from '../../../core/Input';
 import { renderWithTheme } from '../../utils';
