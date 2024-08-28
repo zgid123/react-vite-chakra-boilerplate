@@ -1,0 +1,25 @@
+name: Build Main Project App
+
+description: Build Main Project App
+
+inputs:
+  zustand-devtool-name:
+    required: true
+    description: Zustand devtool name
+  auth-api-endpoint:
+    required: true
+    description: Api endpoint for Authentication
+  api-endpoint:
+    required: true
+    description: Api endpoint for App
+
+runs:
+  using: composite
+  steps:
+    - name: Build app
+      run: |
+        echo VITE_ZUSTAND_DEVTOOL_NAME=${{ inputs.zustand-devtool-name }} >> workspaces/main-project/.env
+        echo VITE_AUTH_API_ENDPOINT=${{ inputs.auth-api-endpoint }} >> workspaces/main-project/.env
+        echo VITE_API_ENDPOINT=${{ inputs.api-endpoint }} >> workspaces/main-project/.env
+        pnpm --filter=main-project build
+      shell: bash

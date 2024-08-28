@@ -1,0 +1,42 @@
+name: Main Project CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - workspaces/main-project/**
+      - packages/**
+      - '!packages/@config/**'
+
+jobs:
+  deploy:
+    name: Deploy Main Project Staging
+    runs-on: ubuntu-latest
+    # remove the if condition if you want to deploy to staging
+    if: ${{ vars.MAIN_PROJECT_STAGING_APP_BUCKET != '' && vars.MAIN_PROJECT_STAGING_APP_BUCKET != null }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Prepare Node.JS and pnpm
+        uses: ./.github/actions/prepare-nodejs-pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build App
+        uses: ./.github/actions/build-main-project-app
+        with:
+          zustand-devtool-name: ${{ vars.VITE_ZUSTAND_DEVTOOL_NAME }}
+          auth-api-endpoint: ${{ vars.MAIN_PROJECT_STAGING_VITE_AUTH_API_ENDPOINT }}
+          api-endpoint: ${{ vars.MAIN_PROJECT_STAGING_VITE_API_ENDPOINT }}
+
+      - name: Deploy to S3
+        uses: ./.github/actions/deploy-s3
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ vars.AWS_REGION }}
+          s3-bucket: ${{ vars.MAIN_PROJECT_STAGING_APP_BUCKET }}
+          distribution-id: ${{ vars.MAIN_PROJECT_STAGING_CLOUDFRONT_DISTRIBUTION_ID }}
+          build-path: workspaces/main-project/dist
